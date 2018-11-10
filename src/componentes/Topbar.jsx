@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -11,12 +10,12 @@ const styles = {
   },
 };
 
-class App extends Component {
+class Topbar extends Component {
   render() {
-    const { classes, titulo } = this.props; 
+    const { classes, titulo, cor } = this.props; 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="secondary">
+        <AppBar position="fixed" color={cor}>
           <Toolbar>
             <Typography variant="h6" color="inherit">
               {titulo}
